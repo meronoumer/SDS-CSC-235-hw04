@@ -10,6 +10,7 @@ const svg = d3.select("#chart")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 const tooltip = d3.select("#tooltip");
+const tooltip1 = d3.select("#tooltip1");
 
 // LOAD DATA
 d3.csv("cleaned_tweets.csv").then(data => {
@@ -105,7 +106,6 @@ d3.csv("cleaned_tweets.csv").then(data => {
                 .attr("stroke", "black")
                 .attr("stroke-width", 2);
 
-            // (You will link this to chart 2 later)
         });
 
     // X AXIS
@@ -155,4 +155,78 @@ d3.csv("cleaned_tweets.csv").then(data => {
         .attr("y", 12)
         .text(d => d);
 
+});
+
+// Chart 2
+const svg2 = d3.select("#chart-reasons")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right) 
+    .attr("height", height + margin.top + margin.bottom/2)
+    .append("g")
+    .attr("transform", `translate(160,${margin.top/4})`);
+
+d3.csv("cleaned_tweets.csv").then(data => {
+    const negativeReasons = d3.rollup(
+        data.filter(d => d.negativereason && d.negativereason !== ""),
+        v => v.length,
+        d => d.negativereason
+    );
+
+    const reasonData = Array.from(negativeReasons, ([reason, count]) => ({ reason, count }))
+        .sort((a, b) => d3.descending(a.count, b.count));
+
+    const x2 = d3.scaleLinear()
+        .domain([0, d3.max(reasonData, d => d.count)])
+        .range([0, width]);
+
+    const y2 = d3.scaleBand()
+        .domain(reasonData.map(d => d.reason))
+        .range([0, height])
+        .padding(0.2)
+
+    svg2.selectAll(".reason-bar")
+        .data(reasonData)
+        .enter()
+        .append("rect")
+        .attr("class", "reason-bar")
+        .attr("x", 0)
+        .attr("y", d => y2(d.reason))
+        .attr("width", d => x2(d.count))
+        .attr("height", y2.bandwidth())
+        .attr("fill", "#f4a6c1")
+        .on("mouseover", function(event, d) {
+            tooltip1.classed("hidden", false)
+                .style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY - 20) + "px")
+                .html(`<strong>${d.reason}</strong><br>Total: ${d.count}`);
+            d3.select(this).attr("opacity", 0.7);
+        })
+        .on("mouseout", function(){
+            tooltip1.classed("hidden", true);
+            d3.select(this).attr("opacity", 1);
+        });
+
+    svg2.append("text")
+        .attr("text-anchor", "middle")
+        .attr("x", width / 2.25)          
+        .attr("y", height + 40)        
+        .attr("fill", "black")
+        .style("font-size", "12px")
+        .text("Number of Tweets");
+
+    svg2.append("text")
+        .attr("transform", "rotate(-90)") 
+        .attr("y", -140)                  
+        .attr("x", -height / 2)           
+        .attr("fill", "black")
+        .attr("text-anchor", "middle")
+        .style("font-size", "12px")
+        .text("Reason for Complaint");
+        
+    svg2.append("g")
+        .attr("transform", `translate(0, ${height})`)
+        .call(d3.axisBottom(x2).ticks(5));
+
+    svg2.append("g")
+        .call(d3.axisLeft(y2));
 });

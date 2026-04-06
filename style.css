@@ -8,11 +8,19 @@ body {
     width: 800px;
 }
 
+#chart-reasons{
+    margin-bottom: 0;
+}
+
+#tooltip1{
+    margin-bottom: 10px;
+}
+
 .bar {
     cursor: pointer;
 }
 
-.tooltip {
+.tooltip, .tooltip1 {
     position: absolute;
     background: white;
     border: 1px solid black;

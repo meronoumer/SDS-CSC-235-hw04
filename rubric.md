@@ -18,11 +18,11 @@ Listed below are various aspects of the assignment. When you turn in your work, 
 
 **PART**  1 pt: Properly titled and labeled 
 
-**PART**  3 pts: At least two visualization elements 
+**YES**  3 pts: At least two visualization elements 
 
-__ 3 pts: Appropriate visual encoding of data 
+**YES** 3 pts: Appropriate visual encoding of data 
 
-__ 3 pts: At least two different types of interaction 
+**YES** 3 pts: At least two different types of interaction 
 
 **YES**  3 pts: Meaningfully supports network analysis, geospatial analysis, visualizing uncertainty, or real-time bias mitigation  
 
