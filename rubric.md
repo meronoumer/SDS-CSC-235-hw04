@@ -26,11 +26,11 @@ Listed below are various aspects of the assignment. When you turn in your work, 
 
 **YES**  3 pts: Meaningfully supports network analysis, geospatial analysis, visualizing uncertainty, or real-time bias mitigation  
 
-__ 1 pt: Sketch 
+**YES** 1 pt: Sketch 
 
-__ 2 pts: Two specific analysis tasks for testing
+**YES** 2 pts: Two specific analysis tasks for testing
 
-__ 2 pts: Notes on user testing
+**YES** 2 pts: Notes on user testing
 
 __ 1 pt: Reasonable adjustment in response to testing 
 
@@ -40,7 +40,7 @@ __ 1 pt: Reasonable adjustment in response to testing
 
 **YES**  1 pt: JS is in an external file, not coded directly in the `.html` file
 
-__ 1 pt: Completed `rubric.md` included with submission
+**YES** 1 pt: Completed `rubric.md` included with submission
 
 **YES**  1 pt: Browser compiles code with no errors 
 
