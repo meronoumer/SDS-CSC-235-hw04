@@ -14,17 +14,17 @@ Listed below are various aspects of the assignment. When you turn in your work, 
 
 ### Phase 2: VA System
 
-__ 1 pt: Built using D3 
+**YES**  1 pt: Built using D3 
 
-__ 1 pt: Properly titled and labeled 
+**PART**  1 pt: Properly titled and labeled 
 
-__ 3 pts: At least two visualization elements 
+**PART**  3 pts: At least two visualization elements 
 
 __ 3 pts: Appropriate visual encoding of data 
 
 __ 3 pts: At least two different types of interaction 
 
-__ 3 pts: Meaningfully supports network analysis, geospatial analysis, visualizing uncertainty, or real-time bias mitigation  
+**YES**  3 pts: Meaningfully supports network analysis, geospatial analysis, visualizing uncertainty, or real-time bias mitigation  
 
 __ 1 pt: Sketch 
 
@@ -36,14 +36,14 @@ __ 1 pt: Reasonable adjustment in response to testing
 
 ### General:
 
-__ 1 pt: CSS is in an external file, not coded directly in the `.html` file
+**YES**  1 pt: CSS is in an external file, not coded directly in the `.html` file
 
-__ 1 pt: JS is in an external file, not coded directly in the `.html` file
+**YES**  1 pt: JS is in an external file, not coded directly in the `.html` file
 
 __ 1 pt: Completed `rubric.md` included with submission
 
-__ 1 pt: Browser compiles code with no errors 
+**YES**  1 pt: Browser compiles code with no errors 
 
-__ 1 pt: Interactive components execute fully and consistently with no errors
+**PART**  1 pt: Interactive components execute fully and consistently with no errors
 
 __ Changelog: Completed `changelog.md` included with submission
