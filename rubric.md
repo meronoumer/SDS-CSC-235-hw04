@@ -16,7 +16,7 @@ Listed below are various aspects of the assignment. When you turn in your work, 
 
 **YES**  1 pt: Built using D3 
 
-**PART**  1 pt: Properly titled and labeled 
+**YES**  1 pt: Properly titled and labeled 
 
 **YES**  3 pts: At least two visualization elements 
 
