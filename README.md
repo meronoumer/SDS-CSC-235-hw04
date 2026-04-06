@@ -37,7 +37,20 @@ Before building your system, you should plan what visualizations you will use, h
 After building your system be sure to test it. To do this:
 
 1. Write down two specific analysis tasks you could ask someone to do with your system. For example, can you identify two cliques in this network? 
+
+
+-  Which airline receives the greatest number of negative tweets?
+
+
+-  For a selected airline, which complaint category appears most frequently?
 2. Ask a classmate or friend to perform the tasks, one by one. As they do, take notes. What do they find intuative about your system? What confuses them? Do any unexpected bugs arise? 
+
+ - 
+My interviewee correctly responded United. They then said the size difference + the color mapping was intuitive and helped them immediately see the largest size in the barplot.
+
+However , for the second question the linkage between our visualizations had an unexpected bug which didn't allow our user to filter and discover more information on a select airline.
+
+
 3. Pick one reasonable adjustment to make to your system based on your testing. Implement that adjustment. 
 
 Be sure to record your answers for the three steps above. Include a text file in your submission with your answers. 
