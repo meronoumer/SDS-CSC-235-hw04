@@ -62,9 +62,13 @@ Be sure to record your answers for the three steps above. Include a text file in
 
  If this is a revised submission of this assignment: fill out `reflection.md`, `rubric.md`, push your completed files to github, and submit your repo on Gradescope. 
 
+## Note to users
 
+To run this project, navigate to the directory where you have cloned this project then type into your terminal the following line
 
+```python -m http.server```
 
+This will open port 8000 which you can access through [this link](http://localhost:8000/SDS-CSC-235-hw04/) and view the data visualizations.
 
 
 
